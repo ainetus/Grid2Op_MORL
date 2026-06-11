@@ -19,8 +19,13 @@ import sys
 from pathlib import Path
 import grid2op
 import numpy as np
-from PPO import PPO
 import tensorflow as tf
+import platform
+if platform.system() == 'Darwin':
+    # Apple Metal GPU backend is missing the Expm1 op needed by the PPO gradient.
+    # Disable GPU on macOS so TF falls back to CPU, which supports all ops.
+    tf.config.set_visible_devices([], 'GPU')
+from PPO import PPO
 from PPO_Reward import PPO_Reward
 from multiprocessing import cpu_count
 from grid2op.Environment import SingleEnvMultiProcess

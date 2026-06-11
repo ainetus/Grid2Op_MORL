@@ -1,14 +1,18 @@
 # Model checkpoints & weights
-*.chkpt
-*.h5
-*.pt
-*.pth
-*.pkl
-*.keras
+
+
 
 # Data
-data/
-datasets/
-*.csv
 *.npz
 *.DS_Store
+/morl
+visualize_grid.py
+/SeniorStudent/wandb
+/SeniorStudent/log
+*.pyc
+training_data_track1/__pycache__/config.cpython-312.pyc
+/SeniorStudent/ckpt
+/ActionSpace
+action_analysis.png
+grid_topology.png
+/JuniorStudent/tfboard

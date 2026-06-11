@@ -1,11 +1,17 @@
+# PyTorch — CUDA 12.4 (Linux/Windows with NVIDIA GPU) installed by default.
+# For macOS (or CPU-only), install instead with:
+#   pip install torch torchvision torchaudio
 torch==2.5.1+cu124
 torchvision==0.20.1+cu124
 torchaudio==2.5.1+cu124
+--extra-index-url https://download.pytorch.org/whl/cu124
+
 numpy>=1.26,<2.2
 scipy>=1.14,<1.17
 lightsim2grid==0.10.3
 grid2op==1.12.1
 tensorflow>=2.16,<2.20
+tensorflow-metal; sys_platform == "darwin"
 numba
 gymnasium==0.29.1
 mo-gymnasium==1.1.0
