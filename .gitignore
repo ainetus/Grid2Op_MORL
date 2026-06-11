@@ -10,6 +10,5 @@
 data/
 datasets/
 *.csv
-*.npy
 *.npz
 *.DS_Store
